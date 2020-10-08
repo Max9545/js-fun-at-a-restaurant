@@ -12,11 +12,16 @@ function addIngredients(topper, pizza) {
   }
 };
 
+function formatPrice(number) {
+  return `$${number}`;
+};
+
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
-  // formatPrice,
+  formatPrice,
   // decreasePrice,
   // createRecipe
 }
