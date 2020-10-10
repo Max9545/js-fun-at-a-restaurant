@@ -12,10 +12,17 @@ function refundOrder(cancelNumber, listToModify) {
   }
 }
 
+function listItems(listToPrint) {
+  var list = [];
+  for (var i = 0; i < listToPrint.length; i++) {
+    list.push(listToPrint[i].item)
+  }
+  return list.toString().replace(/,/g, ', ');
+}
 
 module.exports = {
    takeOrder,
    refundOrder,
-   // listItems,
+   listItems,
    // searchOrder
 }
