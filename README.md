@@ -63,5 +63,5 @@ problem.
 ### 4: Complete the **Chef** tests
   - Unskip the first test in `test/Chef-test.js`, and get to work passing the tests
   - Run `npm test test/Chef-test.js`
-  - Take time to refactor your solutions. Is this the best approach to solving the problem? 
+  - Take time to refactor your solutions. Is this the best approach to solving the problem?
     Is there a different way you could make the tests pass?  
