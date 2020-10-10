@@ -20,9 +20,18 @@ function listItems(listToPrint) {
   return list.toString().replace(/,/g, ', ');
 }
 
+function searchOrder(listToSearch, item) {
+  for (var i = 0; i < listToSearch.length; i++) {
+    if (listToSearch[i].item === item) {
+      return true;
+    }
+  }
+  return false;
+}
+
 module.exports = {
    takeOrder,
    refundOrder,
    listItems,
-   // searchOrder
+   searchOrder
 }
