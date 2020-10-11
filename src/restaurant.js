@@ -14,27 +14,17 @@ function addMenuItem(establishment, item) {
   }
 }
 
-function removeMenuItem(location, item, menu) {
-  for (var i = 0; i < location.menus.breakfast.length; i++) {
-    if (location.menus.breakfast[i].name === item) {
-        location.menus.breakfast.splice(i, 1);
-        return `No one is eating our ${item} - it has been removed from the ${menu} menu!`;
+function removeMenuItem(location, item, type) {
+    var menuTypes = location.menus[type];
+    for (var i = 0; i < menuTypes.length; i++) {
+      if (menuTypes[i].name === item) {
+        menuTypes.splice(i, 1);
+        return `No one is eating our ${item} - it has been removed from the ${type} menu!`;
+      }
     }
-  }
-  for (var i = 0; i < location.menus.lunch.length; i++) {
-    if (location.menus.lunch[i].name === item) {
-        location.menus.lunch.splice(i, 1);
-        return `No one is eating our ${item} - it has been removed from the ${menu} menu!`;
-    }
-  }
-  for (var i = 0; i < location.menus.dinner.length; i++) {
-    if (location.menus.dinner[i].name === item) {
-        location.menus.dinner.splice(i, 1);
-        return `No one is eating our ${item} - it has been removed from the ${menu} menu!`;
-    }
-  }
-  return `Sorry, we don't sell ${item}, try adding a new recipe!`;
+      return `Sorry, we don't sell ${item}, try adding a new recipe!`;
 }
+
 
 
 module.exports = {
