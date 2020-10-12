@@ -3,14 +3,8 @@ function createRestaurant(name) {
 }
 
 function addMenuItem(establishment, item) {
-  if (item.type === 'lunch' && item != establishment.menus.lunch[0]) {
-    establishment.menus.lunch.push(item);
-  }
-  if (item.type === 'breakfast' && item != establishment.menus.breakfast[0]) {
-    establishment.menus.breakfast.push(item);
-  }
-  if (item.type === 'dinner' && item != establishment.menus.dinner[0]) {
-    establishment.menus.dinner.push(item);
+  if (!establishment.menus[item.type].includes(item)) {
+    establishment.menus[item.type].push(item)
   }
 }
 
